@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mybatistest">
+  <select id="selectHoliday" resultType="map" parameterType="info.tsukasaya.mybatistest.TestParameter">
+    SELECT
+       年月日
+      ,名称
+    FROM
+      M_祝祭日
+    WHERE
+      年月日 BETWEEN #{ymdFrom} AND #{ymdTo}
+  </select>
+</mapper>
